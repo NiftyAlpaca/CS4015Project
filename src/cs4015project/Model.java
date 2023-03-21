@@ -8,12 +8,14 @@ import java.util.ArrayList;
 
 public class Model {
     private SimpleListProperty<Song> songCollection;
+
+    private static Model instance;
     public SimpleListProperty<Artist> artistList;
     public SimpleListProperty<Album> albumList;
 
     public int result;
 
-    public Model(){
+    private Model(){
         ArrayList<Song> list = new ArrayList<>();
         ObservableList<Song> observableList = (ObservableList<Song>) FXCollections.observableArrayList(list);
         songCollection = new SimpleListProperty<Song>(observableList);
@@ -28,6 +30,14 @@ public class Model {
 
 
     }
+
+    public static Model getInstance(){
+        if(instance==null){
+            instance = new Model();
+        }
+        return instance;
+    }
+
 
     public SimpleListProperty<Song> songCollection(){
         return songCollection;

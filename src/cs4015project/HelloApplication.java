@@ -14,10 +14,10 @@ import javafx.util.Duration;
 import java.io.IOException;
 
 public class HelloApplication extends Application {
-    public static final Model model = new Model();
-    public static final MainView view = new MainView();
+    public static final Model model = Model.getInstance();
+    public static final MainView view = MainView.getInstance();
 
-    public static final Controller controller = new Controller();
+    public static final Controller controller = Controller.getInstance();
 
     private boolean isSplashLoaded = false;
 

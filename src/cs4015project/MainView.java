@@ -9,8 +9,17 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 public class MainView extends VBox{
-    public MainView(Node... children){
 
+    private static MainView instance;
+    private MainView(Node... children){
+
+    }
+
+    public static MainView getInstance(){
+        if(instance == null){
+            instance = new MainView();
+        }
+        return instance;
     }
 
 }
