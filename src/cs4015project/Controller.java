@@ -5,6 +5,18 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 public class Controller {
+
+    private static Controller instance;
+
+    private Controller(){}
+
+    public static Controller getInstance(){
+        if(instance == null){
+            instance = new Controller();
+        }
+        return instance;
+    }
+
     public static void addSong(String title, Album album, String length, Label error, Stage popup){
         Song newSong = new Song(title, album.artistObjectProperty().get(), album.publishDateProperty.get(), length, album);
         HelloApplication.model.addSong(newSong);
