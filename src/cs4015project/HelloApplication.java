@@ -51,6 +51,7 @@ public class HelloApplication extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
+        //All creations below are to prefill the table with examples
         Artist queen = new Artist("Queen");
         Artist joji = new Artist("Joji");
 
