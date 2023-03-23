@@ -19,38 +19,10 @@ public class HelloApplication extends Application {
 
     public static final Controller controller = Controller.getInstance();
 
-    private boolean isSplashLoaded = false;
-
-    private void loadSplash(Node... nodes) throws IOException {
-        isSplashLoaded = true;
-        Pane pane = FXMLLoader.load(getClass().getResource("hello-view.FXML"));
-        view.getChildren().setAll(pane);
-
-        FadeTransition fadeIn = new FadeTransition(Duration.seconds(3), pane);
-        fadeIn.setFromValue(0);
-        fadeIn.setToValue(1);
-        fadeIn.setCycleCount(1);
-
-        FadeTransition fadeOut = new FadeTransition(Duration.seconds(3), pane);
-        fadeOut.setFromValue(1);
-        fadeOut.setToValue(0);
-        fadeOut.setCycleCount(1);
-
-        fadeIn.play();
-
-        //After fade in, start fade out
-        fadeIn.setOnFinished((e) -> {
-            fadeOut.play();
-        });
-
-        //After fade out, load actual content
-        fadeOut.setOnFinished((e) -> {
-            view.getChildren().setAll(nodes);
-        });
-    }
 
     @Override
     public void start(Stage stage) throws IOException {
+        Facade facade = new Facade();
         //All creations below are to prefill the table with examples
         Artist queen = new Artist("Queen");
         Artist joji = new Artist("Joji");
@@ -73,46 +45,10 @@ public class HelloApplication extends Application {
         model.addAlbum(theGame);
         model.addSong(song5);
 
-        TableView<Song> table = new TableView<Song>();
-        table.setEditable(false);
-        TableColumn titleCol = new TableColumn("TITLE");
-        titleCol.setMinWidth(300);
-        titleCol.setCellValueFactory(
-                new PropertyValueFactory<>("titleProperty"));
-        TableColumn artistCol = new TableColumn("ARTIST");
-        artistCol.setMinWidth(100);
-        artistCol.setCellValueFactory(
-                new PropertyValueFactory<>("artistLinkProperty"));
-        TableColumn albumCol = new TableColumn("ALBUM");
-        albumCol.setMinWidth(300);
-        albumCol.setCellValueFactory(
-                new PropertyValueFactory<>("albumLinkProperty"));
-        TableColumn lengthCol = new TableColumn("LENGTH");
-        lengthCol.setMinWidth(100);
-        lengthCol.setCellValueFactory(
-                new PropertyValueFactory<>("lengthProperty"));
+        facade.SetupMainTable();
+        facade.SetupMenu();
 
-        table.getColumns().addAll(titleCol,artistCol, albumCol,lengthCol);
-        table.setItems(HelloApplication.model.songCollection().get());
-
-        MenuBar menu = new MenuBar();
-        Menu file = new Menu("File");
-        Menu help = new Menu("Help");
-        MenuItem about = new MenuItem("About");
-        MenuItem helpWindow = new MenuItem("Help");
-        MenuItem addArtist = new MenuItem("Add Artist");
-        MenuItem refresh = new MenuItem("Refresh Table");
-        help.getItems().addAll(about, helpWindow);
-        file.getItems().addAll(addArtist,refresh);
-        about.setOnAction(e-> AboutView.display());
-        addArtist.setOnAction(e -> AddArtistView.display());
-        helpWindow.setOnAction(e -> HelpView.display());
-        refresh.setOnAction(e -> table.refresh());
-        menu.getMenus().addAll(file,help);
-
-        if(!isSplashLoaded){
-            loadSplash(menu, table);
-        }
+        facade.LoadSplash();
 
         Scene scene = new Scene(view, 1000, 600);
         stage.setTitle("Song Collection");
