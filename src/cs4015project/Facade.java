@@ -53,11 +53,13 @@ public class Facade {
         Menu help = new Menu("Help");
         MenuItem about = new MenuItem("About");
         MenuItem helpWindow = new MenuItem("Help");
+        MenuItem play = new MenuItem("Play");
         MenuItem addArtist = new MenuItem("Add Artist");
         MenuItem refresh = new MenuItem("Refresh Table");
         help.getItems().addAll(about, helpWindow);
-        file.getItems().addAll(addArtist,refresh);
+        file.getItems().addAll(play, addArtist,refresh);
         about.setOnAction(e-> AboutView.display());
+        play.setOnAction(e -> PlayView.display());
         addArtist.setOnAction(e -> AddArtistView.display());
         helpWindow.setOnAction(e -> HelpView.display());
         refresh.setOnAction(e -> table.refresh());
