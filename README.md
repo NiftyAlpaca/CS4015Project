@@ -1,18 +1,24 @@
 # CS4015Project
 
+## Table of Contents
+- [Overview](https://github.com/NiftyAlpaca/CS4015Project/blob/main/README.md#-overview)
+- [The Original Concept](https://github.com/NiftyAlpaca/CS4015Project/blob/main/README.md#-the-original-concept)
+- [Views](https://github.com/NiftyAlpaca/CS4015Project/blob/main/README.md#-views)
+- [Refactor and Added Features](https://github.com/NiftyAlpaca/CS4015Project/blob/main/README.md#-refactor-and-added-features)
+
 ## <ins> Overview
 
-### <ins> Introduction
+### Introduction
 
 In this project, we took an existing project created by Colton Coughlin for course CS3035 - User Interfaces as an individual project. 
 We decided to take the project and refactor it to implement the design patterns we learned in this course.
 
-### <ins> Language
+### Language
 This project is built in JavaFx/Java. The only thing to note is that instead of simple objects like String, List<>, etc.,
 you will see variables such as SimpleStringProperty and SimpleObjectProperty. These types of variables
 allow the values to be Observable, so when a change happens the tables of the app will know.
 
-### <ins> Architecture
+### Architecture
 The original project was built with Model-View-Controller architecture but the refactored version is not as concerned with
 architecture. This project is focused on design patterns.
 
@@ -24,16 +30,16 @@ but without playback features.  The application consisted of 3 domain objects th
 - Album
 - Song
 
-#### <ins> Main View
+#### Main View
 ![Application-MainView1](doc/Images/Application-MainTable.PNG)
 
 As you can see in the image above, there is a table of songs. Like Spotify, you can click on the song's album name and
 artist name to get more information.
 
-#### <ins> Artist View
+#### Artist View
 ![Application-ArtistView](doc/Images/ArtistView.PNG)
 
-#### <ins> Album View
+#### Album View
 ![Application-AlbumView](doc/Images/AlbumView.PNG)
 
 Along with viewing information, the client can also add,remove,and edit the 3 domain objects. Do note that only the editing of
@@ -48,7 +54,7 @@ and modification. All window classes are indicated in source code by the name fo
 
 ## <ins> Refactor and Added Features
 
-### <ins> Refactoring
+### Refactoring
 
 After refactoring, this project now implements various design patterns including:
 
@@ -58,7 +64,7 @@ After refactoring, this project now implements various design patterns including
 - [Command Pattern](https://github.com/NiftyAlpaca/CS4015Project/blob/main/doc/Command.md)
 - Iterator Pattern
 
-### <ins> Added Features
+### Added Features
 
 While implementing design patterns, we have added multiple features to the original project:
 
