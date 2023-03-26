@@ -33,4 +33,7 @@ public class ProxySongCollection implements SongCollection{
     public SimpleListProperty<Song> getList() {
         return songCollection.getList();
     }
+
+    @Override
+    public SongIterator createIterator(){ return songCollection.createIterator(); }
 }

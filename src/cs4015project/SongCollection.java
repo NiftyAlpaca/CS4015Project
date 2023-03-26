@@ -14,4 +14,6 @@ public interface SongCollection {
     public void editSong(Song song, String newTitle, String newDate, String newLength);
 
     public SimpleListProperty<Song> getList();
+
+    SongIterator createIterator();
 }

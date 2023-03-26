@@ -5,9 +5,10 @@ import java.util.Iterator;
 public class SongIterator implements Iterator {
 
     private int index;
-    private final SongCollection songCollection = HelloApplication.model.getSongCollection();
+    private final SongCollection songCollection;
 
-    public SongIterator(){
+    public SongIterator(SongCollection songCollection){
+        this.songCollection = songCollection;
         index = 0;
     }
 
