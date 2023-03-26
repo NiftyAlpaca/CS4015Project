@@ -45,7 +45,7 @@ public class Song{
             }
         });
 
-        getRemoveLinkProperty().setOnAction(e -> HelloApplication.model.getSongCollection().RemoveSong(this));
+        getRemoveLinkProperty().setOnAction(e -> HelloApplication.model.removeSong(this));
 
         getEditLinkProperty().setOnAction(e -> EditView.display(this));
     }

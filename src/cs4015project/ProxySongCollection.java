@@ -20,13 +20,13 @@ public class ProxySongCollection implements SongCollection{
     }
 
     @Override
-    public int RemoveSong(Song song) {
-        return songCollection.RemoveSong(song);
+    public int removeSong(Song song) {
+        return songCollection.removeSong(song);
     }
 
     @Override
-    public void EditSong(Song song, String newTitle, String newDate, String newLength) {
-        songCollection.EditSong(song,newTitle,newDate,newLength);
+    public void editSong(Song song, String newTitle, String newDate, String newLength) {
+        songCollection.editSong(song,newTitle,newDate,newLength);
     }
 
     @Override

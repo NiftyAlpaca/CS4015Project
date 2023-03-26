@@ -43,3 +43,6 @@ Below is some pseudocode to show the interactions.
         }
     }
 ```
+
+Here is the UML representation: 
+

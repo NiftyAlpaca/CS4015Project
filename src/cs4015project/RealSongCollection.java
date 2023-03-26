@@ -48,7 +48,7 @@ public class RealSongCollection implements SongCollection{
         }
     }
 
-    public int RemoveSong(Song song){
+    public int removeSong(Song song){
         if(songCollection.isEmpty()){
             return -1;
         }
@@ -65,7 +65,7 @@ public class RealSongCollection implements SongCollection{
         return 0;
     }
 
-    public void EditSong(Song song, String newTitle, String newDate, String newLength){
+    public void editSong(Song song, String newTitle, String newDate, String newLength){
         for(Song s : songCollection){
             if(newTitle.compareTo(song.titleProperty.get()) == 0){
                 result = -1;

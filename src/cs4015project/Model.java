@@ -40,6 +40,11 @@ public class Model {
         songCollection.addSong(song);
     }
 
+    public void removeSong(Song song){
+        songCollection.removeSong(song);
+    }
+
+
 
     public static Model getInstance(){
         if(instance==null){
@@ -71,7 +76,7 @@ public class Model {
             return -1;
         }
         for(Song s : artist.songListProperty()){
-            songCollection.RemoveSong(s);
+            songCollection.removeSong(s);
         }
         artist.songListProperty().removeAll();
         for(Album a : artist.albumListProperty()){
@@ -109,7 +114,7 @@ public class Model {
         }
         for(Song j : album.trackListProperty.get()){
             album.artistProperty.get().songListProperty().get().remove(j);
-            songCollection.RemoveSong(j);
+            songCollection.removeSong(j);
         }
         album.trackListProperty.get().removeAll();
         for(Artist a : artistList){
