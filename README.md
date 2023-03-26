@@ -1,10 +1,10 @@
 # CS4015Project
 
 ## Table of Contents
-- [Overview](https://github.com/NiftyAlpaca/CS4015Project/blob/main/README.md#-overview)
-- [The Original Concept](https://github.com/NiftyAlpaca/CS4015Project/blob/main/README.md#-the-original-concept)
-- [Views](https://github.com/NiftyAlpaca/CS4015Project/blob/main/README.md#-views)
-- [Refactor and Added Features](https://github.com/NiftyAlpaca/CS4015Project/blob/main/README.md#-refactor-and-added-features)
+- [Overview](https://github.com/NiftyAlpaca/CS4015Project#-overview)
+- [The Original Concept](https://github.com/NiftyAlpaca/CS4015Project#-the-original-concept)
+- [Views](https://github.com/NiftyAlpaca/CS4015Project#-views)
+- [Refactor and Added Features](https://github.com/NiftyAlpaca/CS4015Project#-refactor-and-added-features)
 
 ## <ins> Overview
 
