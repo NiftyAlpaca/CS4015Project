@@ -10,14 +10,14 @@ public class CommandRemoveSong extends CommandSong
     @Override
     public void undo()
     {
-        model.getSongCollection().addSong(backup);
+        model.addSong(backup);
     }
 
     @Override
     public boolean execute()
     {
         getBackup();
-        model.getSongCollection().getList().remove(song);
+        model.getSongCollection().removeSong(song);
         return true;
     }
 }

@@ -40,6 +40,13 @@ public class Model {
         songCollection.addSong(song);
     }
 
+    public void removeSong(Song song)
+    {
+        Command commandRemoveSong = new CommandRemoveSong(song);
+        commandRemoveSong.execute();
+        HelloApplication.commandHistory.push(commandRemoveSong);
+    }
+
 
     public static Model getInstance(){
         if(instance==null){
@@ -70,8 +77,8 @@ public class Model {
         if(artistList.isEmpty()){
             return -1;
         }
-        for(Song s : artist.songListProperty()){
-            songCollection.RemoveSong(s);
+        for(Song s : artist.songListProperty().toArray(new Song[0])){
+            songCollection.removeSong(s);
         }
         artist.songListProperty().removeAll();
         for(Album a : artist.albumListProperty()){
@@ -109,7 +116,7 @@ public class Model {
         }
         for(Song j : album.trackListProperty.get()){
             album.artistProperty.get().songListProperty().get().remove(j);
-            songCollection.RemoveSong(j);
+            songCollection.removeSong(j);
         }
         album.trackListProperty.get().removeAll();
         for(Artist a : artistList){

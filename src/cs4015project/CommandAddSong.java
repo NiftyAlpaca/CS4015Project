@@ -10,15 +10,14 @@ public class CommandAddSong extends CommandSong
     @Override
     public void undo()
     {
-        model.getSongCollection().RemoveSong(backup);
+        model.getSongCollection().removeSong(backup);
     }
 
     @Override
     public boolean execute()
     {
-        model.getSongCollection().addSong(song);
+        model.addSong(song);
         getBackup();
-        System.out.println(backup);
         return true;
     }
 }
