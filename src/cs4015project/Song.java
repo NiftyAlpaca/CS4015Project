@@ -6,7 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.Hyperlink;
 
-public class Song {
+public class Song{
     protected SimpleStringProperty titleProperty,releaseDateProperty,lengthProperty;
     public SimpleObjectProperty<Album> albumObjectProperty;
     public SimpleObjectProperty<Artist> artistObjectProperty;
@@ -45,7 +45,7 @@ public class Song {
             }
         });
 
-        getRemoveLinkProperty().setOnAction(e -> HelloApplication.model.removeSong(this));
+        getRemoveLinkProperty().setOnAction(e -> HelloApplication.model.getSongCollection().RemoveSong(this));
 
         getEditLinkProperty().setOnAction(e -> EditView.display(this));
     }
