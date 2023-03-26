@@ -35,7 +35,9 @@ public class Controller {
     public static void addAlbum(Artist artist, String albumTitle, String albumDate, String songTitle, String songDate, String songLength, Label error, Stage popup){
 
         Album album = new Album(albumTitle, albumDate, artist);
-        HelloApplication.model.addAlbum(album);
+        Command commandAddAlbum = new CommandAddAlbum(album);
+        commandAddAlbum.execute();
+        HelloApplication.commandHistory.push(commandAddAlbum);
         if(HelloApplication.model.result == -1){
             error.setText("ERROR: Duplicate");
         }
@@ -71,7 +73,9 @@ public class Controller {
         }
 
         Album album = new Album(albumTitle, albumDate, artist);
-        HelloApplication.model.addAlbum(album);
+        Command commandAddAlbum = new CommandAddAlbum(album);
+        commandAddAlbum.execute();
+        HelloApplication.commandHistory.push(commandAddAlbum);
         if(HelloApplication.model.result == -1){
             error.setText("ERROR: Duplicate");
         }

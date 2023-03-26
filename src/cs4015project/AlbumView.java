@@ -67,7 +67,9 @@ public class AlbumView {
         remove.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                HelloApplication.model.removeAlbum(album);
+                Command commandRemoveAlbum = new CommandRemoveAlbum(album);
+                commandRemoveAlbum.execute();
+                HelloApplication.commandHistory.push(commandRemoveAlbum);
                 popup.close();
             }
         });

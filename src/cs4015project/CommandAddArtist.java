@@ -1,19 +1,11 @@
 package cs4015project;
 
-public class CommandAddArtist implements Command
+public class CommandAddArtist extends CommandArtist
 {
-    public Model model = HelloApplication.model;
-    private Artist backup;
-    private final Artist artist;
 
     CommandAddArtist(Artist artist)
     {
-        this.artist = artist;
-    }
-
-    public void getBackup()
-    {
-        backup = artist;
+        super(artist);
     }
 
     // command to remove artist on undo
@@ -21,8 +13,6 @@ public class CommandAddArtist implements Command
     public void undo()
     {
         model.removeArtist(backup);
-        for (Artist value : model.artistList)
-            System.out.println(value);
     }
 
     // command to add the artist
