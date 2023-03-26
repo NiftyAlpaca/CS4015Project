@@ -29,7 +29,7 @@ public class CommandRemoveArtist implements Command
         for (Album album : backup.albumListProperty().toArray(new Album[0]))
             model.addAlbum(album);
         for (Song song : backup.songListProperty().toArray(new Song[0]))
-            model.addSong(song);
+            model.getSongCollection().addSong(song);
     }
 
     // command to remove the artist
@@ -38,6 +38,7 @@ public class CommandRemoveArtist implements Command
     {
         getBackup();
         model.removeArtist(artist);
+        System.out.println("New backup: " + backup);
         return true;
     }
 }

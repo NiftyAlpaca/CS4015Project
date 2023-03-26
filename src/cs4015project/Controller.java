@@ -19,7 +19,9 @@ public class Controller {
 
     public static void addSong(String title, Album album, String length, Label error, Stage popup){
         Song newSong = new Song(title, album.artistObjectProperty().get(), album.publishDateProperty.get(), length, album);
-        HelloApplication.model.addSong(newSong);
+        Command commandAddSong = new CommandAddSong(newSong);
+        commandAddSong.execute();
+        HelloApplication.commandHistory.push(commandAddSong);
         if(HelloApplication.model.result == -1){
             error.setTextFill(Color.color(1,0,0));
             error.setText("ERROR: Duplicate");
@@ -43,7 +45,9 @@ public class Controller {
         }
 
         Song song = new Song(songTitle, artist, songDate, songLength, album);
-        HelloApplication.model.addSong(song);
+        Command commandAddSong = new CommandAddSong(song);
+        commandAddSong.execute();
+        HelloApplication.commandHistory.push(commandAddSong);
         if(HelloApplication.model.result == -1){
             error.setText("ERROR: Duplicate");
         }
@@ -77,7 +81,9 @@ public class Controller {
         }
 
         Song song = new Song(songTitle, artist, songDate, songLength, album);
-        HelloApplication.model.addSong(song);
+        Command commandAddSong = new CommandAddSong(song);
+        commandAddSong.execute();
+        HelloApplication.commandHistory.push(commandAddSong);
         if(HelloApplication.model.result == -1){
             error.setText("ERROR: Duplicate");
         }
