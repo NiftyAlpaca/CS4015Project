@@ -45,7 +45,7 @@ public class Facade {
                 new PropertyValueFactory<>("lengthProperty"));
 
         table.getColumns().addAll(titleCol,artistCol, albumCol,lengthCol);
-        table.setItems(HelloApplication.model.songCollection().get());
+        table.setItems(HelloApplication.model.getSongCollection().getList());
     }
 
     public void SetupMenu(){

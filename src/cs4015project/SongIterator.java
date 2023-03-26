@@ -7,15 +7,15 @@ import java.util.Iterator;
 public class SongIterator implements Iterator {
 
     private int index;
-    private final SimpleListProperty<Song> songCollection;
+    private final SongCollection songCollection;
 
-    public SongIterator(SimpleListProperty<Song> songCollection){
+    public SongIterator(SongCollection songCollection){
         this.songCollection = songCollection;
         index = 0;
     }
 
     public Song getCurrentSong(){
-        return this.songCollection.get(index);
+        return this.songCollection.getSongByIndex(index);
     }
 
     @Override
@@ -31,13 +31,13 @@ public class SongIterator implements Iterator {
     public Song next(){
         if(!hasNext()){ return null; }
         index++;
-        return songCollection.get(index);
+        return songCollection.getSongByIndex(index);
     }
 
     public Song prev(){
         if(!hasPrev()){ return null; }
         index--;
-        return songCollection.get(index);
+        return songCollection.getSongByIndex(index);
     }
 
 
