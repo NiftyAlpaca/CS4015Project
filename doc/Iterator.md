@@ -65,4 +65,4 @@ public class PlayView {
 
 Here is the UML representation of this interaction:
 
-![IteratorUML](Images/Iterator.png)
+![IteratorUML](Images/IteratorPattern.png)
