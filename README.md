@@ -6,6 +6,9 @@
 - [Views](https://github.com/NiftyAlpaca/CS4015Project#-views)
 - [Refactor and Added Features](https://github.com/NiftyAlpaca/CS4015Project#-refactor-and-added-features)
 
+#### Authors
+Colton Coughlin, Jacob Gamble, Sam Durand. Project Group 11.
+
 ## <ins> Overview
 
 ### Introduction
@@ -60,7 +63,7 @@ After refactoring, this project now implements various design patterns including
 
 - [Singleton Pattern](https://github.com/NiftyAlpaca/CS4015Project/blob/main/doc/Singleton.md)
 - [Proxy Pattern](https://github.com/NiftyAlpaca/CS4015Project/blob/main/doc/Proxy.md)
-- Facade Pattern
+- [Facade Pattern]((https://github.com/NiftyAlpaca/CS4015Project/blob/main/doc/Facade.md))
 - [Command Pattern](https://github.com/NiftyAlpaca/CS4015Project/blob/main/doc/Command.md)
 - Iterator Pattern
 

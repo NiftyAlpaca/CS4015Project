@@ -25,7 +25,7 @@ public class Facade {
     }
 
 
-    public void SetupMainTable(){
+    public void setupMainTable(){
         table.setEditable(false);
         TableColumn titleCol = new TableColumn("TITLE");
         titleCol.setMinWidth(300);
@@ -48,7 +48,7 @@ public class Facade {
         table.setItems(HelloApplication.model.getSongCollection().getList());
     }
 
-    public void SetupMenu(){
+    public void setupMenu(){
         Menu file = new Menu("File");
         Menu help = new Menu("Help");
         Menu edit = new Menu("Edit");
@@ -70,7 +70,7 @@ public class Facade {
         menu.getMenus().addAll(file,edit,help);
     }
 
-    public void LoadSplash() throws IOException{
+    public void loadSplashImp() throws IOException{
         if(!isSplashLoaded){
             loadSplash(menu, table);
         }

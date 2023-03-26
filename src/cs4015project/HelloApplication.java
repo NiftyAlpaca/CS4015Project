@@ -48,10 +48,10 @@ public class HelloApplication extends Application {
         model.addAlbum(theGame);
         model.addSong(song5);
 
-        facade.SetupMainTable();
-        facade.SetupMenu();
+        facade.setupMainTable();
+        facade.setupMenu();
 
-        facade.LoadSplash();
+        facade.loadSplashImp();
 
         Scene scene = new Scene(view, 1000, 600);
         stage.setTitle("Song Collection");
