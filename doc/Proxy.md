@@ -8,7 +8,7 @@ The client interacts with the list through the Model class which holds a referen
 
 Below is some pseudocode to show the interactions. 
 
-```
+```java
     public class Client{
         main(){
             model.addSong(Song song);
