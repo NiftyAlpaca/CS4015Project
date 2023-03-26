@@ -52,13 +52,11 @@ and modification. All window classes are indicated in source code by the name fo
 
 After refactoring, this project now implements various design patterns including:
 
-- Singleton Pattern
-- Proxy Pattern
+- [Singleton Pattern](https://github.com/NiftyAlpaca/CS4015Project/blob/main/doc/Singleton.md)
+- [Proxy Pattern](https://github.com/NiftyAlpaca/CS4015Project/blob/main/doc/Proxy.md)
 - Facade Pattern
-- Command Pattern
+- [Command Pattern](https://github.com/NiftyAlpaca/CS4015Project/blob/main/doc/Command.md)
 - Iterator Pattern
-
-To view the usage of each pattern in the project, documentation is available in the document folder of the project.
 
 ### <ins> Added Features
 
