@@ -1,5 +1,10 @@
 ## <ins> Singleton Pattern
 
+We use the Singleton Pattern in this project since through the MVC architecture, we use 3
+static variables model,controller, and view which means we only want one instance of them.
+We use the pattern to better protect how many instances of the three we have and at the same time
+better protect the global variables used by other components.
+
 Before refactoring, our system had three global variables:
 
 - Model model
@@ -18,6 +23,3 @@ instance. The UML of the Singletons is identical to the image below:
 
 
 ![ImpSingletonUML](Images/Singleton.PNG)
-
-These changes improve the code by limiting instances of
-objects that interact with global variables. 
