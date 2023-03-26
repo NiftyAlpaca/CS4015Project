@@ -48,3 +48,23 @@ and modification. All window classes are indicated in source code by the name fo
 
 ## <ins> Refactor and Added Features
 
+### <ins> Refactoring
+
+After refactoring, this project now implements various design patterns including:
+
+- Singleton Pattern
+- Proxy Pattern
+- Facade Pattern
+- Command Pattern
+- Iterator Pattern
+
+To view the usage of each pattern in the project, documentation is available in the document folder of the project.
+
+### <ins> Added Features
+
+While implementing design patterns, we have added multiple features to the original project:
+
+- Playback is now available. Although no actual audio is played, we have recreated the scenario of playing music with text.
+To perform playback, do File -> Play. Information about how the feature is implemented, refer to Iterator.md in the document
+folder of the project.
+- The client can now undo any action by doing Edit -> Undo.
