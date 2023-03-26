@@ -14,7 +14,7 @@ import javafx.util.Duration;
 import java.io.IOException;
 
 public class HelloApplication extends Application {
-    public static final Model model = Model.getInstance();
+    public static  Model model = Model.getInstance();
     public static final MainView view = MainView.getInstance();
 
     public static final Controller controller = Controller.getInstance();

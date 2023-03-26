@@ -19,7 +19,7 @@ public class Model {
     private Model(){
         ArrayList<Song> list = new ArrayList<>();
         ObservableList<Song> observableList = (ObservableList<Song>) FXCollections.observableArrayList(list);
-        songCollection = new SongCollection();
+        songCollection = new ProxySongCollection();
 
         ArrayList<Artist> list2 = new ArrayList<>();
         ObservableList<Artist> observableList2 = (ObservableList<Artist>) FXCollections.observableArrayList(list2);
