@@ -9,9 +9,9 @@ public interface SongCollection {
 
     public void addSong(Song song);
 
-    public int RemoveSong(Song song);
+    public int removeSong(Song song);
 
-    public void EditSong(Song song, String newTitle, String newDate, String newLength);
+    public void editSong(Song song, String newTitle, String newDate, String newLength);
 
     public SimpleListProperty<Song> getList();
 }

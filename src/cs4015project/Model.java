@@ -70,7 +70,7 @@ public class Model {
         if(artistList.isEmpty()){
             return -1;
         }
-        for(Song s : artist.songListProperty().toArray(new Song[0])){
+        for(Song s : artist.songListProperty()){
             songCollection.RemoveSong(s);
         }
         artist.songListProperty().removeAll();
@@ -107,7 +107,7 @@ public class Model {
         if(albumList.isEmpty()){
             result = -1;
         }
-        for(Song j : album.trackListProperty.get().toArray(new Song[0])){
+        for(Song j : album.trackListProperty.get()){
             album.artistProperty.get().songListProperty().get().remove(j);
             songCollection.RemoveSong(j);
         }
