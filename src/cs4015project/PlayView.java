@@ -61,9 +61,8 @@ public class PlayView {
             }
         });
 
-        SimpleListProperty<Song> songCollection = Model.getInstance().songCollection();
-        if (songCollection.size() > 0){ //Dealing with at least one song
-            iterator = new SongIterator(songCollection);
+        if (Model.getInstance().getSongCollection().size() > 0){ //Dealing with at least one song
+            iterator = new SongIterator(Model.getInstance().getSongCollection());
 
             next.setOnAction(new EventHandler<ActionEvent>() {
                 @Override

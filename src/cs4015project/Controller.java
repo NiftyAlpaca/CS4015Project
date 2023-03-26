@@ -88,7 +88,7 @@ public class Controller {
     }
 
     public static void editSong(Song song, String newTitle, String newDate, String newLength, Label error, Stage popup){
-        HelloApplication.model.EditSong(song, newTitle,newDate,newLength);
+        HelloApplication.model.getSongCollection().EditSong(song, newTitle,newDate,newLength);
         if(HelloApplication.model.result == -1){
             error.setText("ERROR: Duplicate");
         }
