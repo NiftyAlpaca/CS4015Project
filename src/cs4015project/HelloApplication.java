@@ -16,12 +16,14 @@ import java.io.IOException;
 public class HelloApplication extends Application {
     public static final Model model = Model.getInstance();
     public static final MainView view = MainView.getInstance();
-
     public static final Controller controller = Controller.getInstance();
 
+    //initialize command history to log edits
+    public static final CommandHistory commandHistory = new CommandHistory();
 
     @Override
     public void start(Stage stage) throws IOException {
+
         Facade facade = new Facade();
         //All creations below are to prefill the table with examples
         Artist queen = new Artist("Queen");
@@ -35,6 +37,7 @@ public class HelloApplication extends Application {
         Song song4 = new Song("Sanctuary",joji,"2020","3:27",nectar);
         Song song5 = new Song("Crazy Little Thing Called Love", queen, "1980","2:43", theGame);
 
+        //default additions
         model.addArtist(queen);
         model.addAlbum(newsOfTheWorld);
         model.addSong(song1);

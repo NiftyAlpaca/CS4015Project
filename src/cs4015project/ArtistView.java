@@ -63,7 +63,9 @@ public class ArtistView {
         remove.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                HelloApplication.model.removeArtist(artist);
+                Command removeArtist = new CommandRemoveArtist(artist);
+                removeArtist.execute();
+                HelloApplication.commandHistory.push(removeArtist);
                 popup.close();
             }
         });

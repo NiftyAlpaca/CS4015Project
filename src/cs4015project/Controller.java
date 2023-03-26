@@ -55,7 +55,9 @@ public class Controller {
 
     public static void addArtist(String name, String albumTitle, String albumDate, String songTitle, String songDate, String songLength, Label error, Stage popup){
         Artist artist = new Artist(name);
-        HelloApplication.model.addArtist(artist);
+        CommandAddArtist addArtist = new CommandAddArtist(artist);
+        addArtist.execute();
+        HelloApplication.commandHistory.push(addArtist);
         if(HelloApplication.model.result == -1){
             error.setText("ERROR: Duplicate");
         }
@@ -94,6 +96,12 @@ public class Controller {
             error.setText("");
             popup.close();
         }
+    }
+
+    public static void undo()
+    {
+        if (!HelloApplication.commandHistory.isEmpty())
+            HelloApplication.commandHistory.pop().undo();
     }
 
 }

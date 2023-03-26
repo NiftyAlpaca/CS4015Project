@@ -25,6 +25,4 @@ public class Artist {
 
     public SimpleListProperty<Album> albumListProperty() {return albumListProperty;}
     public SimpleListProperty<Song> songListProperty() {return songListProperty;}
-
-
 }

@@ -51,11 +51,14 @@ public class Facade {
     public void SetupMenu(){
         Menu file = new Menu("File");
         Menu help = new Menu("Help");
+        Menu edit = new Menu("Edit");
         MenuItem about = new MenuItem("About");
         MenuItem helpWindow = new MenuItem("Help");
         MenuItem play = new MenuItem("Play");
         MenuItem addArtist = new MenuItem("Add Artist");
         MenuItem refresh = new MenuItem("Refresh Table");
+        MenuItem undo = new MenuItem("Undo");
+        edit.getItems().addAll(undo);
         help.getItems().addAll(about, helpWindow);
         file.getItems().addAll(play, addArtist,refresh);
         about.setOnAction(e-> AboutView.display());
@@ -63,7 +66,8 @@ public class Facade {
         addArtist.setOnAction(e -> AddArtistView.display());
         helpWindow.setOnAction(e -> HelpView.display());
         refresh.setOnAction(e -> table.refresh());
-        menu.getMenus().addAll(file,help);
+        undo.setOnAction(e -> Controller.undo());
+        menu.getMenus().addAll(file,edit,help);
     }
 
     public void LoadSplash() throws IOException{
