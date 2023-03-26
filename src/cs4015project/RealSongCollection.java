@@ -82,4 +82,7 @@ public class RealSongCollection implements SongCollection{
     //apply to it. The single thing we want hidden is the kind of list the table wants in order to have it change values
     //on the spot. Please, try to forget this exists. VIP.
     public SimpleListProperty<Song> getList(){return songCollection;};
+
+    public SongIterator createIterator(){ return new SongIterator(this); }
+
 }
