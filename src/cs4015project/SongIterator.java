@@ -1,16 +1,13 @@
 package cs4015project;
 
-import javafx.beans.property.SimpleListProperty;
-
 import java.util.Iterator;
 
 public class SongIterator implements Iterator {
 
     private int index;
-    private final SongCollection songCollection;
+    private final SongCollection songCollection = HelloApplication.model.getSongCollection();
 
-    public SongIterator(SongCollection songCollection){
-        this.songCollection = songCollection;
+    public SongIterator(){
         index = 0;
     }
 

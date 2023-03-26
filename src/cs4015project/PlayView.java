@@ -62,7 +62,7 @@ public class PlayView {
         });
 
         if (Model.getInstance().getSongCollection().size() > 0){ //Dealing with at least one song
-            iterator = new SongIterator(Model.getInstance().getSongCollection());
+            iterator = new SongIterator();
 
             next.setOnAction(new EventHandler<ActionEvent>() {
                 @Override
