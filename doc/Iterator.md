@@ -1,6 +1,6 @@
 ## <ins> Iterator Pattern
 
-We used the iterator pattern to implement the ability to traverse their collection of songs by simulating playback by giving the user the option to go to the next/previous song in the playlist.
+We used the iterator pattern to implement the ability to traverse their collection of songs by simulating playback by giving the user the option to go to the next/previous song in the playlist. This allows for the decoupling of classes and the collection and allows for future features that iterate over the collection to do so reliably. This also allows for the data structure respresenting the collection to change if needed without having to change the way many classes traverse the collection.
 
 To implement the Iterator pattern, we created a new user interface with the `PlayView` UI where the user interacts with the system. 
 
