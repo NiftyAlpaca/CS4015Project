@@ -65,7 +65,7 @@ After refactoring, this project now implements various design patterns including
 - [Proxy Pattern](https://github.com/NiftyAlpaca/CS4015Project/blob/main/doc/Proxy.md)
 - [Facade Pattern](https://github.com/NiftyAlpaca/CS4015Project/blob/main/doc/Facade.md)
 - [Command Pattern](https://github.com/NiftyAlpaca/CS4015Project/blob/main/doc/Command.md)
-- Iterator Pattern
+- [Iterator Pattern](https://github.com/NiftyAlpaca/CS4015Project/blob/main/doc/Iterator.md))
 
 ### Added Features
 
